@@ -1,13 +1,15 @@
 Assignment Summary
 
-In this assignment, I used Pandas to load and work with the dataset from a CSV file. First, I explored the dataset using functions like head(), shape, columns, dtypes, and info() to understand the structure of the data.
+This assignment focused on performing basic data exploration and data cleaning operations using the Pandas library in Python.
 
-After that, I checked for missing values using isnull().sum() and handled them by filling appropriate values such as 0, "No review", "Unknown Seller", "No Video", and "Not Available" depending on the column type and meaning.
+The dataset was loaded from a CSV file into a Pandas DataFrame and explored using functions such as head(), shape, dtypes, columns, and info() to understand its structure, datatypes, and overall contents.
 
-I also checked the dataset for duplicate rows using duplicated().sum() and performed basic filtering operations to display products with ratings greater then 4. Column selection operations were also performed on the dataset.
+Missing values were identified using isnull().sum() and handled appropriately by filling numeric missing values with 0 and categorical missing values with meaningful placeholders such as "No review", "Unknown Seller", and "Not Available".
 
-The final_price column originally contained string values with currency symbols and commas, so I cleaned the column using regular expresions and converted it into numeric format using pd.to_numeric().
+The dataset was checked for duplicate rows using duplicated().sum(). Basic filtering operations were also performed to display products with ratings greater than 4.
 
-A new derived column named total_amount was created using initial_price and ratings_count to perform basic column transformation operations in Pandas. Since the dataset did not contain quantity data, ratings count was used insted for the calculation.
+The final_price column originally contained string values with currency symbols and formatting characters. These values were cleaned using regular expressions and converted into numeric format using pd.to_numeric() for proper processing.
 
-Finally, the cleaned dataset was saved as a new CSV file named cleaned_combined_dataset.csv.
+A derived column named total_amount was created using initial_price and ratings_count to demonstrate column transformation and basic arithmetic operations in Pandas.
+
+Finally, the cleaned dataset was exported as a new CSV file named cleaned_combined_dataset.csv.
